@@ -1,4 +1,4 @@
-FROM nikolaik:python3.9-nodejs16-slim
+FROM python:3.9-slim-buster
 
 ENV PIP_NO_CACHE_DIR 1
 ENV LANG C.UTF-8
@@ -16,7 +16,6 @@ RUN apt -qq update && apt -qq upgrade -y && \
     gnupg2 \
     wget \
     unzip \
-    procps \
     tree
 
 RUN mkdir -p /tmp/ && \
